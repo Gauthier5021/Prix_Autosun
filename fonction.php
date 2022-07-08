@@ -39,14 +39,14 @@ elseif ($_POST['FournisseurElec'] == "Rexel")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec;
+        echo $ResultPrixElec, "<br />";
     }
     $SqlLien = $db->query("SELECT lien FROM Elec_Rexel");
 
     while ($Result = $SqlLien->fetch())
     {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a>";
+        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 elseif ($_POST['FournisseurElec'] == "Cged")
@@ -56,14 +56,14 @@ elseif ($_POST['FournisseurElec'] == "Cged")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec;
+        echo $ResultPrixElec, "<br />";
     }
     $SqlLien = $db->query("SELECT lien FROM Elec_Cged");
 
     while ($Result = $SqlLien->fetch())
     {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a>";
+        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 elseif ($_POST['FournisseurElec'] == "123Elec")
@@ -73,15 +73,48 @@ elseif ($_POST['FournisseurElec'] == "123Elec")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec;
+        echo $ResultPrixElec, "<br />";
     }
     $SqlLien = $db->query("SELECT lien FROM Elec_123Elec");
 
     while ($Result = $SqlLien->fetch())
     {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a>";
+        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 
+//Somme Yesss
+$SommeYesss = $db->query("SELECT SUM(prix) as somme FROM Elec_Yesss");
+
+while ($Prix = $SommeYesss->fetch())
+{
+    $PrixYesss = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
+}
+
+//Somme Rexel
+$SommeRexel = $db->query("SELECT SUM(prix) as somme FROM Elec_Rexel");
+
+while ($Prix = $SommeRexel->fetch())
+{
+    $PrixRexel = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
+}
+
+// Somme Cged
+$SommeCged = $db->query("SELECT SUM(prix) as somme FROM Elec_Cged");
+
+while ($Prix = $SommeCged->fetch())
+{
+    $PrixRexel = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
+}
+
+// Somme Cged
+$SommeCged = $db->query("SELECT SUM(prix) as somme FROM Elec_123Elec");
+
+while ($Prix = $SommeCged->fetch())
+{
+    $PrixRexel = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
+}
+
+// Faire des conditions pour les nombre paire et impaire.
 ?>
