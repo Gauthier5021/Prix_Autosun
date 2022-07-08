@@ -1,0 +1,14 @@
+body
+{
+    text-align: center;
+}
+.TableauElec
+{
+    text-align: center;
+    border-collapse: collapse;
+}
+.TitreElec, .MatosElec
+{
+    text-align: center;
+    border: 1px solid black;
+}

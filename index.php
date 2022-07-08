@@ -14,9 +14,9 @@
         <!-- Header of the page -->
             <?php include("nav.php"); ?>
 
-            <?php include("fonction_electrique.php"); ?>
+            <?php include("fonction.php"); ?>
 
-            <?php echo ConnectionMysql(); ?>
+            <?php // echo ConnectionMysql(); ?>
 
         <!-- Best Known List -->
             <div class="List">
