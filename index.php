@@ -27,8 +27,8 @@
                   <li>Pince Aeotec</li>
                 </ul>
                 <ul class="NavElectrique">
-                  <li><a href="<?php echo FournisseurOption1(); ?>">Fournisseur 1</a></li>
-                  <li><a href="<?php echo FournisseurOption2(); ?>">Fournisseur 2</a></li>
+                  <li><a href="">Fournisseur 1</a></li>
+                  <li><a href="">Fournisseur 2</a></li>
                   <li>Matèriel</li>
                 </ul>
                 <ul class="NavPlomberie">

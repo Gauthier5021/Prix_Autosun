@@ -13,24 +13,24 @@
 
         <form method="POST" action="matos.php" class="FormulaireElec">
 
-          <h3 class="TitrePrincipaleElec">Electricité</h3><br />
-            <select class="FournisseurElec" name="FournisseurElec">
-              <option>Yesss</option>
-              <option>Rexel</option>
-              <option>Cged</option>
-              <option>123Elec</option>
-              <input type="submit" class="BoutonFournisseur" name="BoutonFournisseur" value="Confirmer" />
-            </select>
-
             <table class="TableauElec">
 
-            <?php include("fonction.php"); ?>
+            <h1 class="TitrePrincipaleElec">Liste Prix</h1><br />
             
-                <tr>
+              <tr class="ChampTableau">
+                <h3 class="TitreTableauElectrique">Electricité</h3><br /> 
+                  <select class="FournisseurElec" name="FournisseurElec">
+                    <option>Yesss</option>
+                    <option>Rexel</option>
+                    <option>Cged</option>
+                    <option>123Elec</option>
+                    <input type="submit" class="BoutonFournisseur" name="BoutonFournisseur" value="Confirmer" />
+                   </select>
                   <th class="TitreElec">Nom</th>
                   <th class="TitreElec">Prix</th>
                   <th class="TitreElec">Lien</th>
                   <th class="TitreElec">Mise a jour</th>  
+                  <?php include("fonction.php"); ?>
                 </tr>
                 <tr>
                   <td class="MatosElec">7G1</td>
