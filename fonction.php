@@ -17,19 +17,13 @@ catch (Exception $e)
 // Partie Elec Yesss
 if ($_POST['FournisseurElec'] == "Yesss")
 {
-    $SqlPrixElec = $db->query("SELECT prix FROM Elec_Yesss");
+    $SqlPrixElec = $db->query("SELECT prix, lien FROM Elec_Yesss");
     
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec, "<br />";
-    }
-    $SqlLien = $db->query("SELECT lien FROM Elec_Yesss");
-
-    while ($Result = $SqlLien->fetch())
-    {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
+        echo $ResultPrixElec, " ", "<a href='$ResultLienElec' class='LienYesss' >Cliquez Ici</a><br />";
     }
 }
 elseif ($_POST['FournisseurElec'] == "Rexel")
@@ -39,14 +33,8 @@ elseif ($_POST['FournisseurElec'] == "Rexel")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec, "<br />";
-    }
-    $SqlLien = $db->query("SELECT lien FROM Elec_Rexel");
-
-    while ($Result = $SqlLien->fetch())
-    {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
+        echo $ResultPrixElec, " ", "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 elseif ($_POST['FournisseurElec'] == "Cged")
@@ -56,14 +44,8 @@ elseif ($_POST['FournisseurElec'] == "Cged")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec, "<br />";
-    }
-    $SqlLien = $db->query("SELECT lien FROM Elec_Cged");
-
-    while ($Result = $SqlLien->fetch())
-    {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
+        echo $ResultPrixElec, " ", "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 elseif ($_POST['FournisseurElec'] == "123Elec")
@@ -73,14 +55,8 @@ elseif ($_POST['FournisseurElec'] == "123Elec")
     while ($Result = $SqlPrixElec->fetch())
     { 
         $ResultPrixElec = $Result['prix'];
-        echo $ResultPrixElec, "<br />";
-    }
-    $SqlLien = $db->query("SELECT lien FROM Elec_123Elec");
-
-    while ($Result = $SqlLien->fetch())
-    {    
         $ResultLienElec = $Result['lien'];
-        echo "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
+        echo $ResultPrixElec, " ", "<a href='$ResultLienElec'>Cliquez Ici</a><br />";
     }
 }
 
@@ -108,7 +84,7 @@ while ($Prix = $SommeCged->fetch())
     $PrixRexel = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
 }
 
-// Somme Cged
+// Somme 123Elec
 $SommeCged = $db->query("SELECT SUM(prix) as somme FROM Elec_123Elec");
 
 while ($Prix = $SommeCged->fetch())
@@ -116,5 +92,6 @@ while ($Prix = $SommeCged->fetch())
     $PrixRexel = round($Prix['somme'], PHP_ROUND_HALF_EVEN);
 }
 
-// Faire des conditions pour les nombre paire et impaire.
+// Test Display
+
 ?>

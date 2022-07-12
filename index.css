@@ -4,11 +4,52 @@ body
 }
 .TableauElec
 {
+    position: relative;
+    left: 900px;
+    bottom: 17px;
     text-align: center;
     border-collapse: collapse;
+}
+.LienYesss
+{
+    position: relative;
+    left: 450px;
+    font-size: 18px;
+}
+.FournisseurElec
+{
+    position: relative;
+    bottom: 20px;
+}
+.BoutonFournisseur
+{
+    position: relative;
+    bottom: 20px;
 }
 .TitreElec, .MatosElec
 {
     text-align: center;
     border: 1px solid black;
+    font-size: 20px;
+}
+.MatosElecTitre
+{
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+    font-size: 20px;
+}
+.TitreElecMysqlPrix, .MatosElecMysqlPrix
+{
+    text-align: center;
+    border: 1px solid black;
+    width: 12%;
+    font-size: 20px;
+    padding: 13px;
+}
+.ResultMysql
+{
+    position: absolute;
+    left: 1120px;
+    font-size: 24px;
 }

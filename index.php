@@ -16,8 +16,6 @@
 
             <?php include("fonction.php"); ?>
 
-            <?php // echo ConnectionMysql(); ?>
-
         <!-- Best Known List -->
             <div class="List">
                <h3 class="CategoryTitle">CATEGORIES</h3><br />
